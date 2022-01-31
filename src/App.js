@@ -1,8 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "./logo.svg"
+import "./App.css"
 
 // TodoTitleコンポーネントをImport
-import { TodoTitle } from "./component/TodoTitle";
+import { TodoTitle } from "./component/TodoTitle"
+import { TodoRegister } from "./component/TodoRegister"
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <TodoTitle />
       </header>
+      <TodoRegister />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

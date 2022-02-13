@@ -2,19 +2,16 @@ import logo from "./logo.svg"
 import "./App.css"
 
 // TodoTitleコンポーネントをImport
-import { TodoTitle } from "./component/TodoTitle"
-import { TodoRegister } from "./component/TodoRegister"
+import { TodoApp } from "./component/TodoApp"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <TodoTitle />
       </header>
-      <TodoRegister />
+      <TodoApp />
     </div>
   )
 }
-
 export default App

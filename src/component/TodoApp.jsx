@@ -42,8 +42,8 @@ export const TodoApp = () => {
     <div>
       <h1>Todoアプリ</h1>
       <h2>Todo登録</h2>
-      {/* <input type="text" value={newTodo} onChange={changeValue} />
-      <button onClick={onAddTodo}>登録</button> */}
+      <input type="text" value={newTodo} onChange={changeValue} />
+      <button onClick={onAddTodo}>登録</button>
       <addTodos
         newTodo={newTodo}
         changeValue={changeValue}

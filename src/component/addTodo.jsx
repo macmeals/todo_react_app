@@ -1,6 +1,6 @@
 import React from "react"
 
-export const addTodos = (props) => {
+export const AddTodos = (props) => {
   const { newTodo, changeValue, onAddTodo } = props
   return (
     <div>

@@ -2,7 +2,7 @@ import logo from "./logo.svg"
 import "./App.css"
 
 import { useState } from "react"
-import { addTodos } from "./component/addTodo"
+import { AddTodos } from "./component/AddTodo"
 
 export const App = () => {
   //  初期値valueを空にセット、状態を格納する変数setValueをセット
@@ -50,9 +50,7 @@ export const App = () => {
       </div>
       <h1>Todoアプリ</h1>
       <h2>Todo登録</h2>
-      {/* <input type="text" value={newTodo} onChange={changeValue} />
-      <button onClick={onAddTodo}>登録</button> */}
-      <addTodos
+      <AddTodos
         newTodo={newTodo}
         changeValue={changeValue}
         onAddTodo={onAddTodo}

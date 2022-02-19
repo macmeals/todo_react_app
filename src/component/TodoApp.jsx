@@ -44,6 +44,7 @@ export const TodoApp = () => {
       <h2>Todo登録</h2>
       <input type="text" value={newTodo} onChange={changeValue} />
       <button onClick={onAddTodo}>登録</button>
+      {/* todo登録のコンポーネント　 AddTodo.jsx　*/}
       <addTodos
         newTodo={newTodo}
         changeValue={changeValue}

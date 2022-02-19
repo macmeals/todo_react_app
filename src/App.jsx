@@ -3,6 +3,7 @@ import "./App.css"
 
 import { useState } from "react"
 import { AddTodos } from "./component/AddTodo"
+import { TodoLists } from "./component/TodoList"
 
 export const App = () => {
   //  初期値valueを空にセット、状態を格納する変数setValueをセット
@@ -50,25 +51,19 @@ export const App = () => {
       </div>
       <h1>Todoアプリ</h1>
       <h2>Todo登録</h2>
+      {/* Todo登録のコンポーメントから関数AddTodosの呼び出し*/}
       <AddTodos
         newTodo={newTodo}
         changeValue={changeValue}
         onAddTodo={onAddTodo}
       />
       <h2>TodoList</h2>
-      <ul>
-        {incompleteTodos.map((todos, index) => {
-          return (
-            <li key={todos.id}>
-              <p className={todos.completeFlag ? "yokosen" : ""}>
-                {todos.todo}
-              </p>
-              <button onClick={() => onCompleteTodo(index)}>完了</button>
-              <button onClick={() => onDeleteTodo(index)}>削除</button>
-            </li>
-          )
-        })}
-      </ul>
+      {/* Todoリストのコンポーネントから関数TodoListsの呼び出し*/}
+      <TodoLists
+        todoItems={incompleteTodos}
+        onCompleteTodo={onCompleteTodo}
+        onDeleteTodo={onDeleteTodo}
+      />
     </div>
   )
 }
